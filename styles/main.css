@@ -246,7 +246,8 @@ body main form button {
       justify-content: space-around;
   border-radius: 40px;
   border-style: none;
-  background-color: pink;
+  background: -webkit-gradient(linear, left top, right top, from(#f6b1b0), color-stop(70%, #f19a9a));
+  background: linear-gradient(90deg, #f6b1b0 0%, #f19a9a 70%);
   right: 10%;
   bottom: 0;
 }
