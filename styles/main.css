@@ -45,8 +45,7 @@ body header img {
 
 @media (min-width: 800px) {
   body header img {
-    margin: 60px;
-    margin-left: 165px;
+    margin-left: 7vw;
   }
 }
 
