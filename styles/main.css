@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 2fr;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: "header right" "main right";
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+body header {
+  grid-area: header;
+}
+
+body header img {
+  margin: 32px;
+}
+
+@media (min-width: 800px) {
+  body header img {
+    margin: 60px;
+    margin-left: 165px;
+  }
+}
+
+body .hero-img {
+  grid-area: right;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 800px) {
+  body .hero-img {
+    background-image: url("../images/hero-mobile.jpg");
+  }
+}
+
+@media (min-width: 800px) {
+  body .hero-img {
+    background-image: url("../images/hero-desktop.jpg");
+    background-position: center;
+  }
+}
+
+body main {
+  grid-area: main;
+  background-color: #fff8f9;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 800px) {
+  body main {
+    background-color: transparent;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 7vw;
+    padding-right: 10vw;
+  }
+}
+
+body main p {
+  color: #ce9797;
+  margin-top: 0;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  /*
+            @include medium {
+                font-size:1.5rem;
+            }*/
+}
+
+@media (max-width: 375px) {
+  body main p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 800px) {
+  body main p {
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+body main h1 {
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-top: 65px;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  /*
+            @include medium {
+                font-size:4rem;
+            }*/
+}
+
+@media (max-width: 375px) {
+  body main h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  body main h1 {
+    font-size: 5rem;
+    letter-spacing: 20px;
+  }
+}
+
+body main h1 span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+body main .email-container {
+  height: 48px;
+  width: 80%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ce9797;
+  border-radius: 40px;
+  position: relative;
+  max-width: 500px;
+}
+
+body main .email-container .btn {
+  position: absolute;
+}
+
+body main .email-container p {
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 50%;
+}
+
+body main form {
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+body main form input {
+  border-color: #ce9797;
+  border-style: solid;
+  border-radius: 40px;
+  background-color: transparent;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  height: 48px;
+  padding-left: 20px;
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 375px) {
+  body main form input {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 800px) {
+  body main form input {
+    height: 56px;
+    width: 100%;
+  }
+}
+
+body main form input::-webkit-input-placeholder {
+  color: rgba(206, 151, 151, 0.4);
+}
+
+body main form input:-ms-input-placeholder {
+  color: rgba(206, 151, 151, 0.4);
+}
+
+body main form input::-ms-input-placeholder {
+  color: rgba(206, 151, 151, 0.4);
+}
+
+body main form input::placeholder {
+  color: rgba(206, 151, 151, 0.4);
+}
+
+body main form button {
+  position: absolute;
+  width: 64px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 40px;
+  border-style: none;
+  background-color: pink;
+  right: 10%;
+  bottom: 0;
+}
+
+@media (min-width: 800px) {
+  body main form button {
+    right: 0;
+    height: 56px;
+    width: 100px;
+  }
+}
+
+body main #error-message {
+  position: absolute;
+  left: 5vw;
+  top: 55px;
+  color: #e44343;
+  font-size: 1em;
+  visibility: hidden;
+}
+
+@media (min-width: 800px) {
+  body main #error-message {
+    margin-top: 5px;
+    left: 2vw;
+  }
+}
+
+body main #error-icon {
+  position: absolute;
+  top: 25%;
+  right: calc(20vw + 40px);
+  visibility: hidden;
+}
+
+@media (min-width: 800px) {
+  body main #error-icon {
+    right: calc(120px);
+  }
+}
+/*# sourceMappingURL=main.css.map */
